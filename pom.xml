@@ -25,7 +25,7 @@
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
-                 <artifactId>maven-surfire-plugin</artifactId>
+                <artifactId>maven-surfire-plugin</artifactId>
                 <version>2.22.2</version>
                 <configuration>
                     <failInfoTests>true</failInfoTests>
