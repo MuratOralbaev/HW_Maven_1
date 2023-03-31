@@ -1,9 +1,9 @@
-import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
 public class BonusServiceTest {
     @Test
-    void shouldCalculateForRegisteredAndUnderLimit() {
+    public void shouldCalculateForRegisteredAndUnderLimit() {
         BonusService service = new BonusService();
         long amount = 1000;
         boolean registered = true;
@@ -13,7 +13,7 @@ public class BonusServiceTest {
     }
 
     @Test
-    void shouldcalculateForRegisteredAndOverLimit() {
+    public void shouldcalculateForRegisteredAndOverLimit() {
         BonusService service = new BonusService();
         long amount = 1_000_000;
         boolean registered = true;
@@ -23,7 +23,7 @@ public class BonusServiceTest {
     }
 
     @Test
-    void shouldCalculateForNotRegisteredUnderLimit() {
+    public void shouldCalculateForNotRegisteredUnderLimit() {
         BonusService service = new BonusService();
         long amount = 1000;
         boolean registered = false;
@@ -33,7 +33,7 @@ public class BonusServiceTest {
     }
 
     @Test
-    void shouldCalculateForNotRegisteredOverLimit() {
+    public void shouldCalculateForNotRegisteredOverLimit() {
         BonusService service = new BonusService();
         long amount = 1_000_000;
         boolean registered = false;
@@ -41,5 +41,4 @@ public class BonusServiceTest {
         long actual = service.calculate(amount, registered);
         Assertions.assertEquals(expected, actual);
     }
-
 }
